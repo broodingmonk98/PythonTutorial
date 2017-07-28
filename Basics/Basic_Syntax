@@ -1,0 +1,23 @@
+Python uses whitespaces for indentation.
+# generally begins comments unless within a string.
+For assignments, no data type is required, and the line ends the statement, there is no need for an explict delimiter.
+A variable once assigned a value, can then be assigned another value of another data type, which shall just result in it being overwritten.
+Any consequent access to that variable will give the latest assigned value.
+del is used to delete a variable which has been assigned, and that variable can no longer be accessed after it.
+Arithmetic expressions are like c. ** is used for exponentiation and // is used to give an integer (truncated) value.
+
+Strings are similar to c, with the usual escape characters with a '\'. "" and '' are used for strings, the only difference being that the other character need not be escaped within the string.
+""" quotes as a delimiter allows splitting of string over multiple lines. ''' does the same thing.
+
+Pythons has four kinds of numbers: integers, floats, comlex numbers and Booleans. Integers have unlimited ranges. A float can be written using scientific notation and a decimal point. It generally has a precision of a 64bit double in c. Complex numbers are written as x+yj. Booleans take values true and false, with the former also acting as 1 and the later as 0. 
+The int() function converts to the int type, and float() and complex() do the same for floats and complex numbers. bool() converts non zero numbers to True and 0 to False.
+
+Some numeric built in functions are abs, divmod, c, float, hex, int, max, min, oct, pow, round. 
+More advanced numeric functions found in math module are acos, asin, atan, atan2, ceil, cos, cosh, e, exp, fabs, floor, fmod, frexp, hypot, ldexp, log, log10, mod, pi, pow, sin, sinh, sqrt, tan, tanh.
+
+Although python isn't good with intense computation, the numpy module supports extremely efficient array operations. And it also has more advanced functions like the fft.
+
+The real and imaginary parts of complex numbers can be accessed by the variable_name.real and variable_name.imag. The functions for complex numbers are in the cmath module. Popular functions inclue acos, acosh, asin, asinh, atan, atah, cos, cosh, e, exp, log, log10, pi, sin, sinh, sqrt, tan, tanh.
+
+Input() receives input from the user, and can be supplied with a string to display to the user. It returns a string, and should be converted to another datatype explicitly.
+
