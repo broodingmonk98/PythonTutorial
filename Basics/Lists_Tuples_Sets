@@ -1,0 +1,31 @@
+A list is an ordered collection of objects. Its similar to an array in C.
+Lists can be declared without reference to size like so: x = [1,2,3]. The size of the list can grow or shrink as needed. The list can contain different types of elements, which can be any python objects. len() function returns the size of lists.
+
+Elemenets can be indexed. Indexing starts from 0. Negative indices count backwards with -1 referring to the last element. Splicing referes to extracting a part of the list. This is done using notation like this: x[a:b] extracts the part of the list starting at a, upto but not including b. if a>=b then an empty list is returned. Omitting a means start from beginning and omitting b means go till end.
+
+Lists can be modified using index notation. x[a:b]=[..,..,...] Replaces the part of the list starting at a and going upto but not including b with the list on th right, regardless of the sizes of the sublist and the new list. Popular methods to make the code more readable are
+x.append(y)   same as x[len(x):]=[y].
+x.extend(y)   same as x[len(x):]= y	where y is itself a list. 
+x.insert(a,y) same as x[a:a]    = [y]   where y is an element
+del x[a] or del x[a:b] deletes that part of the list and is same as x[a:b] = []
+x.remove(a) removes the element 'a' from the list. If 'a' is not in the list it throws an error.
+x.reverese() reverses a list in place.
+
+A list x can be sorted using x.sort(). This can only sort lists with comparable objects. It sorts strings alphabetically and a list of lists lexicographically.
+To Custom sort something we have to define our own function as a key and pass it to the sort method like so x.sort(key=customFun()). To reverse replace key= by reverse=True.
+
+Use x in y or x not in y where y is the element and x is the list.
+Use x + y to get a new list which is a concation of the two lists x and y.
+use min(x) and max(x) to find min and max elements of the list. However the elements should all be comparable.
+x.count(y) returns the number of occurances of the element y in the list, and 0 if it is not in the list.
+
+Python supports nesting of lists using double indices to refer to the elements. However if a nested list has been assigned with the value of a list say x, then changing x will change the contents of the nested list as well. However if x is assigned a to a new list, then the connection is broken.
+One can make a deep copy of a nested list using the following:
+import copy
+deep = copy.deepcopy(original).
+
+A tuble is like a list but immutable. It is declared by enclosing the elements with '(' and ')' rather than '[' and ']'. Empty tuples are allowed but tuples containing single elements must have a comma to distinguish it from other uses of '()'. a,b,c = 1,2,3 automatically creates a tuple on the right and assigns it to the one on the left. list(x) and tuple(y) are used to convert x to a list and y to a tuple respectively.
+
+A set is an unordered collectoin of objects used where membership and uniqueness are the main operations necessary. They are immutable and elements are to be hashable. They can only contain ints floats strings and typles. Sets are created by enclosing in '{}'. There are no repetitions in sets. x.add(y) is used to add y to set x, and x.remove(y) is used to remove y from x. x|y, x&y and x^y gives the union, intersection and symmetric difference between two sets respectively.
+
+Since a set can contain only immutable elements, they can't contain other sets. However there are a special class of functions called frozed sets which are immutable and hashable and so can be elements of a set. frozenset(x) returns the frozen set of a set x and can then be added to another set.
