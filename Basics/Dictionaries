@@ -1,0 +1,5 @@
+Dictionaries are a data structure used to store data. They are not ordered, and can be indexed using strings and integers and so on, and are not restricted to only integers like dictionaries.
+
+len(x) returns length of dictionary x. x.keys() returns the keys used in the dictionary and x.values() returns all the values in the dictionary. del x[y] is used to delete the value at y in dictionary x. x.keys() and x.items() and x.avlues() are all views and changing the dictionary changes their values as well. x.items() returns all the elemnts of the dictionary along with their corresponding keys as a list of tuples. x.get(x,y) returns the value stored in the dictionary at x if it exists otherwise it returns y.
+
+y=x.copy() makes a shallow copy and copy.deepcopy() makes a deep copy. x.update(z) updates x with the values of z. Tuples containing immutable elements can be used as dictionary keys and therein lies their advantage and use.
