@@ -1,0 +1,15 @@
+A string is a sequence of characters. It is immutable unlike lists.e However characters can be indexed and splicing works. + is used for concation and * to repeat a string n times. Escape sequences are similar to C. '\xyz' substitues the ascii character of the octal number xyz. Similarly '\xabc' does the same for the hexadecimal number abc. Use print("abc",end="") to remove default newline.
+
+x.join([...]) where the [...] is a list of strings joints the strings and separates them with the string x. x.split() by default splits a string into a list of strings whenever it encounters a whitespaces character. x.split(y) splits on encountering y character. x.split(y,z) splits the string x the first z times, using the delimiter y (if y is None then it splits on runs of whitespaces).
+
+Strings can be converted into ints or floats using the int() and float() methods. int(x,y) converts the string x in base y to an integer. Wrong input raises exceptions.
+
+stripg(), lstrip() and rstrip() strip the string of whitespaces at the beginning and end, beginning and end respectively. x.strip(y) removes all occurances of characters of string y in the stirng x.
+
+String searching is done by find(). x.find(y) returns the index of the first character of the first occurance of the substring y in x or -1 otherwise. rfind() starts from the right to the left.
+
+x.replace("patter1","Patter2") gives a new string in which occurances of patter1 in x are replaced by pattern2. Other functions are x.lower(), x.upper, x.capitalize() and x.title. x.expandtabs() replaces tabs by equivalent spaces. x.ljust, rjust and center pad a string with spaces to justify it in a certain field width. zfill left pads with zeros. isdigit(), islower(), isalpha() and isupper() report qualities of the string.
+
+repr(x) converts x into a string. str(x) does the same thing but it is more printable and does not contain all information necessary to convert it back to the object. THe x.format(x1,x2..xn) replaces {i} field in x with xi regardless of the physical order in the string.
+
+"{0:10} is blah".format("cawc caw") replaces the {} with "cawc caw" and just justifites it to the right by ten units. {0:>10} forces left justification and {0,{1}} takes input in the format function itself.
