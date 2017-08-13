@@ -1,0 +1,40 @@
+The while loop has the following syntax:
+while condition:
+	body
+else:
+	body
+break and continue statements are used just like in C.
+The if else if construct has the following syntax:
+if condition:
+	body
+elif condition1:
+	body
+.
+.
+.
+else:
+	body
+only the body under the if part is compulsary and a 'pass' statement serves as a placeholder in case no staetment is required.
+
+The for loop is slightly different than other language constructs in that any iterable object can be iterated through. Its syntax is as follows:
+for item in sequence:
+	body
+else:
+	body
+
+If the loop needs explict indices instead of the elements of the iterable, then the following can be used:
+for i in range(len(x)):
+using range(a,b) means going upto b, starting from a. range(a,b,c) starts from a and makes the step size c. If c is negative one can move backward.
+for i,n in enumerage(x):
+makes i take the index value and n the value of the object.
+
+The zip(a,b) function takes list a and list b and forms a pairwise tuples of the lists, terminating when one of the lists run out.
+
+Creating new lists from existing lists, is done via a comprehension.
+y= [ expression for i in x if expression1] results in a list of elements. The syntax seems clear enough so as to not warrant any extra explanation. For lists the syntax is:
+y = {expression : expression for i in x if expression}
+
+The condition part of a control flow statement should evalute to a boolean.
+Supported comparision operators are >, >=, <, <=, == and <>. in and not in operators also give bools as do is and not is when comparing objects.
+bools can be combined using and, or  and not operators.
+is checks for the same object while a == checks for same values.
