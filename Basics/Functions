@@ -1,0 +1,21 @@
+The definition of a function is as follows :
+def name(parameter1,parameter2...):
+	body
+
+One can specifiy a return statement as well. If no return is specified python automatically makes the function return the special None value. When calling a function one needs to pass exactly the number of arguments as present in the parameter list of the function definition. The parameters can take default values, and all parameeters with default values should be defined at the end of the parameter list after all the other parameters. In this case, atleast arguments equal to the number of non default parameters must be passed.
+
+Python generally associates parameters with arguments based on order. However if called in this way : name(parameter2=5,parameter1=6) then order is ignored and this type of passing is called keyword passing.
+If there are to be a variable number of arguments one can use :
+def name(p1,p2,*p):
+and all the excess arguments will be passed to *p in the form of a tuple. if:
+def name(p1,p2,**p):
+is used and in keyword passing, there are extra arguments, they are added as keys to the dictionary p.
+
+Arguments are passed by reference, and in case the object passed is mutable, it shall be changed, unless reassigned before the change. 
+Defining a variable to be global, allows it to be used outside the function. Non local is another option.
+Functions can be assigned to variables and even put in lists, or dictionaries and used as usual.
+
+Lambda expressions are functions defined inline, and are nameless. Syntax:
+lambda p1,p1: body
+Lambda expressions don't have areturn statement since the expression is automatically returned.
+Since functions are just objects they can be passed as arguments and also returned by other functions. This brings in the concept of decorator functions, which add functionality to a function.
