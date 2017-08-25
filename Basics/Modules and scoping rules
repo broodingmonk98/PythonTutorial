@@ -1,0 +1,11 @@
+Modules are files containing code, and are useful to break up a large program across several files. Modeuls use namespaces to prevent conflicts due to the same names occuring in two different modules. The syntax for important a module is:
+import x
+x.fun1()
+x.var1
+An alternative to avoid prepending with module name is
+from x import y
+Now y can be used directly.
+The locations searched for finding modules in python are given by the path variable in the sys module.
+To make some variables and functions private to some modules, so that they are not imported when used as : from module import *, one can prefix the name with an underscore. If the variable needs to be accessed it can be done through import module, module.x .
+There are three namespaces in python, local, global, and built in. First the local namespace is check, then the global and finally the built in. Any new binding in one of these, shall result in it being found first, essentially overriding the previous definition. It can be got back by using del to remove the latest link. The same holds across namespaces.
+the locals() and globals() functions return the bindings in the local and global namespaces.
