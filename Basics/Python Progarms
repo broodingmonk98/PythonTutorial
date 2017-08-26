@@ -1,0 +1,6 @@
+A script are bunches of lines of code placed in files. They are useful for writing large programs. Modules can be defined and called in scripts. Generally in scripts there is a control function which is called. Although not necessary, this makes it neater, and is easier to debug.
+Python scripts have a .py extension. In Mac you can run them by typing: python3 x.py
+The .py file can be made an executable by running a chmod +x abc.py and setting '#! /usr/path/to/python' at the top of the file.
+the sys module helps read in command line arguments and other input and output through the module. sys.argv gives a list of command line arguments passed. It also has an option parser to extract some specific commands from the arguments passed.
+The python file can be distributed standalone, as executables by using py2app orfreeze.
+
